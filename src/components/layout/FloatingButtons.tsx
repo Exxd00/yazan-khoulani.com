@@ -21,28 +21,46 @@ export default function FloatingButtons() {
   const isHomePage = pathname === "/";
 
   useEffect(() => {
-    // Detect iOS
-    const isIOSDevice =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    setIsIOS(isIOSDevice);
+    try {
+      // Detect iOS safely
+      const userAgent = typeof navigator !== "undefined" ? navigator.userAgent || "" : "";
+      const isIOSDevice = /iPad|iPhone|iPod/.test(userAgent);
+      setIsIOS(isIOSDevice);
 
-    // Check if already installed (standalone mode)
-    const isInStandaloneMode =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      (window.navigator as unknown as { standalone?: boolean }).standalone ===
-        true;
-    setIsStandalone(isInStandaloneMode);
+      // Check if already installed (standalone mode) safely
+      let isInStandaloneMode = false;
+      try {
+        if (typeof window !== "undefined" && window.matchMedia) {
+          isInStandaloneMode = window.matchMedia("(display-mode: standalone)").matches;
+        }
+        // Check Safari-specific standalone property
+        if (typeof navigator !== "undefined" && "standalone" in navigator) {
+          isInStandaloneMode = isInStandaloneMode || (navigator as { standalone?: boolean }).standalone === true;
+        }
+      } catch {
+        // Ignore errors from matchMedia
+      }
+      setIsStandalone(isInStandaloneMode);
 
-    const handler = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setIsInstallable(true);
-    };
+      const handler = (e: Event) => {
+        e.preventDefault();
+        setDeferredPrompt(e as BeforeInstallPromptEvent);
+        setIsInstallable(true);
+      };
 
-    window.addEventListener("beforeinstallprompt", handler);
+      if (typeof window !== "undefined") {
+        window.addEventListener("beforeinstallprompt", handler);
+      }
 
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+      return () => {
+        if (typeof window !== "undefined") {
+          window.removeEventListener("beforeinstallprompt", handler);
+        }
+      };
+    } catch {
+      // Fail silently if there are any issues with browser APIs
+      console.warn("Error initializing PWA detection");
+    }
   }, []);
 
   const handleInstall = async () => {

@@ -1,26 +1,16 @@
-# Yazan Khoulani Website - TODOs
+# Yazan Khoulani Website - Todos
 
-## Completed
-- [x] Fixed author name from خوالني to خولاني in all files
-- [x] Added dark/light mode toggle
-- [x] Created ThemeProvider component
-- [x] Added PWA manifest and service worker
-- [x] Created PWA icon placeholder
-- [x] Updated FloatingButtons with: dark mode toggle, PWA install, back to home button
-- [x] Removed scroll-to-top button
-- [x] Added animations throughout the site (fade-in, slide, float, etc.)
-- [x] Updated Header for dark mode
-- [x] Updated CSS with dark mode variables and new animations
-- [x] Created book cover SVG placeholder
+## Completed ✅
+- [x] Import repository from GitHub
+- [x] Add iPhone PWA installation instructions modal
+- [x] iOS device detection for install button
+- [x] Step-by-step Arabic instructions (Share → Add to Home Screen → Add)
+- [x] Safari browser requirement note
+- [x] Scale-in animation for modal
+- [x] Hide install button in standalone mode
+- [x] Push changes to GitHub repository
 
 ## Pending
-- [ ] User needs to upload actual book cover image to public/images/book-cover.jpg
-- [ ] Generate PWA icons in different sizes (72, 96, 128, 144, 152, 192, 384, 512)
-- [ ] Test PWA installation on mobile devices
-- [ ] Add more page-specific animations
-- [ ] Consider adding parallax scrolling effects
-
-## Notes
-- Dark mode uses class-based switching
-- PWA is configured but icons need to be generated from the SVG
-- Animations use CSS keyframes defined in globals.css
+- [ ] Test PWA installation on actual iPhone device
+- [ ] Add Android-specific installation instructions (optional)
+- [ ] Consider adding visual screenshots/illustrations for steps
