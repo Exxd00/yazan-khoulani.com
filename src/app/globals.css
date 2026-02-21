@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Syrian Revolution Flag Colors */
+    --color-revolution-green: 28 90 50;
+    --color-revolution-red: 206 17 38;
+    --color-revolution-black: 0 0 0;
+    --color-revolution-white: 255 255 255;
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+    --primary: 145 53% 23%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 5%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 354 85% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 354 85% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 145 30% 80%;
+    --input: 145 30% 80%;
+    --ring: 145 53% 23%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 95%;
+    --card: 222 47% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 222 47% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 145 53% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 222 47% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 354 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 354 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 25%;
+    --input: 222 30% 25%;
+    --ring: 145 53% 35%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-tajawal antialiased;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amiri', serif;
+  }
+}
+
+@layer components {
+  .btn-cta {
+    @apply bg-[rgb(206,17,38)] hover:bg-[rgb(180,15,33)] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-cta-secondary {
+    @apply border-2 border-[rgb(28,90,50)] text-[rgb(28,90,50)] hover:bg-[rgb(28,90,50)] hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300;
+  }
+
+  .heading-primary {
+    @apply text-[rgb(28,90,50)] dark:text-[rgb(75,180,110)] font-bold;
+  }
+
+  .text-body {
+    @apply text-black dark:text-gray-200 leading-relaxed;
+  }
+
+  .card-quote {
+    @apply bg-white dark:bg-gray-800 border border-[rgb(28,90,50)]/20 dark:border-[rgb(75,180,110)]/30 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .section-divider {
+    @apply border-t border-[rgb(28,90,50)]/20 dark:border-[rgb(75,180,110)]/20;
+  }
+
+  .floating-btn {
+    @apply fixed z-50 shadow-xl rounded-full transition-all duration-300 hover:scale-110;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/80 dark:bg-gray-900/80;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Floating animation */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide in from right (for RTL) */
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Slide in from left (for RTL) */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Scale up animation */
+  .animate-scale-up {
+    animation: scaleUp 0.5s ease-out forwards;
+  }
+
+  @keyframes scaleUp {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Pulse slow animation */
+  .animate-pulse-slow {
+    animation: pulseSlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  /* Shimmer effect */
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    background-size: 200% 100%;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[rgb(28,90,50)] to-[rgb(75,180,110)] bg-clip-text text-transparent;
+  }
+
+  .dark .gradient-text {
+    @apply from-[rgb(75,180,110)] to-[rgb(150,220,170)];
+  }
+
+  /* Parallax effect helper */
+  .parallax-slow {
+    transform: translateZ(-10px) scale(2);
+  }
+
+  .parallax-fast {
+    transform: translateZ(0);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Stagger animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 20px rgba(28, 90, 50, 0.3);
+  }
+
+  .dark .glow {
+    box-shadow: 0 0 20px rgba(75, 180, 110, 0.3);
+  }
+
+  /* Underline animation */
+  .underline-animation {
+    position: relative;
+  }
+
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    right: 0;
+    background: rgb(28, 90, 50);
+    transition: width 0.3s ease;
+  }
+
+  .dark .underline-animation::after {
+    background: rgb(75, 180, 110);
+  }
+
+  .underline-animation:hover::after {
+    width: 100%;
+  }
+
+  /* 3D Flip Card Effect */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}

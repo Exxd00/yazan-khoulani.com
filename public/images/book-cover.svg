@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c5a32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d3d1f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <text x="150" y="180" font-family="Amiri, serif" font-size="32" fill="#ce1126" text-anchor="middle" font-weight="bold">في حبّك</text>
+  <text x="150" y="230" font-family="Amiri, serif" font-size="40" fill="white" text-anchor="middle" font-weight="bold">ثار الوطن</text>
+  <text x="150" y="280" font-family="Amiri, serif" font-size="20" fill="white" text-anchor="middle" opacity="0.8">«رواية»</text>
+  <text x="150" y="380" font-family="Tajawal, sans-serif" font-size="18" fill="#ce1126" text-anchor="middle">يزن خولاني</text>
+  <!-- Heart with bandage -->
+  <g transform="translate(130, 300)">
+    <path d="M20 35 L0 15 A10 10 0 0 1 20 5 A10 10 0 0 1 40 15 Z" fill="#ce1126"/>
+    <rect x="8" y="12" width="24" height="8" fill="#f5deb3" rx="2"/>
+    <rect x="16" y="10" width="8" height="12" fill="#f5deb3" rx="2"/>
+  </g>
+</svg>
