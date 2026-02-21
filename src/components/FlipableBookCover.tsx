@@ -7,7 +7,7 @@ export default function FlipableBookCover() {
   const [showBack, setShowBack] = useState(false);
 
   const frontCover = "https://ugc.same-assets.com/lTptJvPdnyGqNZCuBQ63Au3r8hu_7tDA.jpeg";
-  const backCover = "https://ugc.same-assets.com/p8MSaL5QSXSBkVvwb5TrWudmqBaFxhKy.jpeg";
+  const backCover = "https://ugc.same-assets.com/xKEZdutj5NoVgUp0GYV4dTt7fBA-HgNV.jpeg";
 
   return (
     <div className="relative group">

@@ -311,4 +311,94 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+
+  /* Text glow animation */
+  .animate-text-glow {
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow: 0 0 5px rgba(28, 90, 50, 0.3), 0 0 10px rgba(28, 90, 50, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 15px rgba(28, 90, 50, 0.5), 0 0 25px rgba(28, 90, 50, 0.3), 0 0 35px rgba(28, 90, 50, 0.2);
+    }
+  }
+
+  .dark .animate-text-glow {
+    animation: textGlowDark 2s ease-in-out infinite;
+  }
+
+  @keyframes textGlowDark {
+    0%, 100% {
+      text-shadow: 0 0 5px rgba(74, 222, 128, 0.3), 0 0 10px rgba(74, 222, 128, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 15px rgba(74, 222, 128, 0.5), 0 0 25px rgba(74, 222, 128, 0.3), 0 0 35px rgba(74, 222, 128, 0.2);
+    }
+  }
+
+  /* Icon bounce animation */
+  .animate-icon-bounce {
+    animation: iconBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes iconBounce {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.1);
+    }
+  }
+
+  /* Icon pulse animation */
+  .animate-icon-pulse {
+    animation: iconPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes iconPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+  }
+
+  /* Icon wiggle animation */
+  .animate-icon-wiggle {
+    animation: iconWiggle 2.5s ease-in-out infinite;
+  }
+
+  @keyframes iconWiggle {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+  }
+
+  /* Icon breathe animation */
+  .animate-icon-breathe {
+    animation: iconBreathe 3s ease-in-out infinite;
+  }
+
+  @keyframes iconBreathe {
+    0%, 100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 2px rgba(28, 90, 50, 0.3));
+    }
+    50% {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 8px rgba(28, 90, 50, 0.5));
+    }
+  }
 }

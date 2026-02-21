@@ -19,13 +19,14 @@ const whyDifferent = [
   "لأنها تترك أثرًا طويلًا بعد الصفحة الأخيرة.",
 ];
 
-const trustBadges = [
+// Animated trust icons without text
+const trustIcons = [
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -39,14 +40,15 @@ const trustBadges = [
         <circle cx="18.5" cy="18.5" r="2.5" />
       </svg>
     ),
-    text: "شحن حسب منطقتك",
+    animation: "animate-icon-bounce",
+    delay: "0s",
   },
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -58,14 +60,15 @@ const trustBadges = [
         <polyline points="9 12 11 14 15 10" />
       </svg>
     ),
-    text: "متاجر معتمدة",
+    animation: "animate-icon-pulse",
+    delay: "0.2s",
   },
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -77,7 +80,31 @@ const trustBadges = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    text: "تحديثات توفر مستمرة",
+    animation: "animate-icon-wiggle",
+    delay: "0.4s",
+  },
+  {
+    // App icon - book/reading icon
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        <path d="M12 6v7" />
+        <path d="M9 9h6" />
+      </svg>
+    ),
+    animation: "animate-icon-breathe",
+    delay: "0.6s",
   },
 ];
 
@@ -184,19 +211,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Badges */}
+      {/* Animated Trust Icons */}
       <section className="py-10">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            {trustBadges.map((badge) => (
+          <div className="flex flex-wrap justify-center gap-10 md:gap-16">
+            {trustIcons.map((item, index) => (
               <div
-                key={badge.text}
-                className="flex flex-col items-center gap-2 text-revolution-green/80 dark:text-revolution-green"
+                key={index}
+                className={`text-revolution-green dark:text-green-400 ${item.animation} cursor-pointer hover:text-revolution-green/70 dark:hover:text-green-300 transition-colors`}
+                style={{ animationDelay: item.delay }}
               >
-                {badge.icon}
-                <span className="text-sm font-medium">{badge.text}</span>
+                {item.icon}
               </div>
             ))}
+          </div>
+          {/* iPhone Instructions */}
+          <div className="mt-6 text-center">
+            <p className="text-xs text-black/50 dark:text-gray-400 flex items-center justify-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="inline-block"
+              >
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+              لمستخدمي iPhone: اضغط على "مشاركة" ثم "إضافة للشاشة الرئيسية"
+            </p>
           </div>
         </div>
       </section>

@@ -27,9 +27,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex flex-col items-start group">
-            <span className="text-2xl font-amiri font-bold text-revolution-green dark:text-green-400 relative">
+            <span className="text-2xl font-amiri font-bold text-revolution-green dark:text-green-400 animate-text-glow">
               Yazan Khoulani
-              <span className="absolute -left-2 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-revolution-red rounded-full animate-pulse" />
             </span>
             <span className="text-sm text-revolution-green/70 dark:text-green-400/70 font-tajawal">
               في حبّك ثار الوطن
@@ -175,9 +174,8 @@ export default function Header() {
               <SheetContent side="right" className="w-80 bg-white dark:bg-gray-900">
                 <div className="flex flex-col gap-6 mt-8">
                   <Link href="/" className="flex flex-col items-start">
-                    <span className="text-xl font-amiri font-bold text-revolution-green dark:text-green-400 relative">
+                    <span className="text-xl font-amiri font-bold text-revolution-green dark:text-green-400 animate-text-glow">
                       Yazan Khoulani
-                      <span className="absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-1 bg-revolution-red rounded-full" />
                     </span>
                     <span className="text-xs text-revolution-green/70 dark:text-green-400/70 font-tajawal">
                       في حبّك ثار الوطن
