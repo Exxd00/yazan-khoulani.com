@@ -23,17 +23,14 @@ export default function AboutAuthorPage() {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-12">
-          {/* Author Image Placeholder */}
+          {/* Author Image */}
           <div className="flex justify-center">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-revolution-green/20 to-revolution-green/5 flex items-center justify-center border-4 border-revolution-green/20 shadow-xl">
-              <div className="text-center">
-                <div className="text-6xl md:text-7xl font-amiri font-bold text-revolution-green/40">
-                  ي
-                </div>
-                <div className="text-revolution-green/40 font-tajawal text-sm">
-                  يزن خولاني
-                </div>
-              </div>
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-revolution-green/30 shadow-xl">
+              <img
+                src="/images/author.jpg"
+                alt="يزن خولاني - كاتب رواية في حبّك ثار الوطن"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
 
