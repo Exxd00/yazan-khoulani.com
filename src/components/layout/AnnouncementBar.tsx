@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { trackPurchaseClick } from "@/lib/analytics";
 
 export default function AnnouncementBar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -29,18 +30,24 @@ export default function AnnouncementBar() {
           متوفر الآن — اختر الشحن: أوروبا أو الدول العربية
         </p>
         <div className="flex gap-2">
-          <Link
-            href="/where-to-buy#europe"
+          <a
+            href="https://share.google/FA1GLVYEGmyFfArYK"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackPurchaseClick("europe")}
             className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded text-xs font-bold transition-colors"
           >
             أوروبا
-          </Link>
-          <Link
-            href="/where-to-buy#arab"
+          </a>
+          <a
+            href="https://bibliomaniapublishing.com/product/في-حبك-ثار-الوطن/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackPurchaseClick("arab")}
             className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded text-xs font-bold transition-colors"
           >
             الدول العربية
-          </Link>
+          </a>
         </div>
       </div>
       <button

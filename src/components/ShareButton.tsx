@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { trackShareClick } from "@/lib/analytics";
 
 export default function ShareButton() {
   const [copied, setCopied] = useState(false);
@@ -15,6 +16,7 @@ export default function ShareButton() {
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
         await navigator.share({ title, text, url });
+        trackShareClick("native_share");
       } catch {
         // User cancelled or error
         copyToClipboard(url);
@@ -27,6 +29,7 @@ export default function ShareButton() {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
+      trackShareClick("clipboard_copy");
       setTimeout(() => setCopied(false), 2000);
     });
   };

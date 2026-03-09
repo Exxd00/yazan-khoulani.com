@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { trackModalOpen } from "@/lib/analytics";
 
 const quotes = [
   "بعض الأوطان لا تطلب منك إلا شيئًا واحدًا… أن تصمت.",
@@ -34,8 +35,14 @@ export default function QuotesModal({ trigger }: QuotesModalProps) {
     setCurrentIndex((prev) => (prev - 1 + quotes.length) % quotes.length);
   };
 
+  const handleOpenChange = (open: boolean) => {
+    if (open) {
+      trackModalOpen("quotes");
+    }
+  };
+
   return (
-    <Dialog>
+    <Dialog onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         {trigger || (
           <Button variant="outline" className="btn-cta-secondary">

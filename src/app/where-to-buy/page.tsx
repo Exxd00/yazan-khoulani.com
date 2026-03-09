@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
+import { TrackedPurchaseButton } from "@/components/TrackedButtons";
 
 export const metadata: Metadata = {
   title: "أين أشتري",
@@ -51,11 +51,13 @@ export default function WhereToBuyPage() {
             <p className="text-black/70 mb-8 text-lg">
               للشحن داخل أوروبا
             </p>
-            <a href="#" className="inline-block">
-              <Button className="btn-cta text-lg py-6 px-10 w-full">
-                شراء داخل أوروبا
-              </Button>
-            </a>
+            <TrackedPurchaseButton
+              region="europe"
+              href="https://share.google/FA1GLVYEGmyFfArYK"
+              className="btn-cta text-lg py-6 px-10 w-full"
+            >
+              شراء داخل أوروبا
+            </TrackedPurchaseButton>
             <p className="text-sm text-black/50 mt-4">
               شحن سريع لجميع الدول الأوروبية
             </p>
@@ -89,11 +91,13 @@ export default function WhereToBuyPage() {
             <p className="text-black/70 mb-8 text-lg">
               للشحن إلى الدول العربية
             </p>
-            <a href="#" className="inline-block">
-              <Button className="btn-cta text-lg py-6 px-10 w-full">
-                شراء في الدول العربية
-              </Button>
-            </a>
+            <TrackedPurchaseButton
+              region="arab"
+              href="https://bibliomaniapublishing.com/product/في-حبك-ثار-الوطن/"
+              className="btn-cta text-lg py-6 px-10 w-full"
+            >
+              شراء في الدول العربية
+            </TrackedPurchaseButton>
             <p className="text-sm text-black/50 mt-4">
               شحن لجميع الدول العربية
             </p>

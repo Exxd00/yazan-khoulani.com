@@ -9,14 +9,21 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { trackModalOpen } from "@/lib/analytics";
 
 interface ExcerptModalProps {
   trigger?: React.ReactNode;
 }
 
 export default function ExcerptModal({ trigger }: ExcerptModalProps) {
+  const handleOpenChange = (open: boolean) => {
+    if (open) {
+      trackModalOpen("excerpt");
+    }
+  };
+
   return (
-    <Dialog>
+    <Dialog onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         {trigger || (
           <Button variant="outline" className="btn-cta-secondary">
