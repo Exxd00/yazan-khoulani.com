@@ -43,7 +43,7 @@ const assets = [
 
 const externalLinks = [
   { name: "رابط شراء أوروبا", url: "https://share.google/FA1GLVYEGmyFfArYK" },
-  { name: "رابط شراء الدول العربية", url: "https://bibliomaniapublishing.com/product/في-حبك-ثار-الوطن/" },
+  { name: "رابط شراء الدول العربية", url: "https://bibliomaniapublishing.com/product/%D9%81%D9%8A-%D8%AD%D8%A8%D9%83-%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D9%88%D8%B7%D9%86/" },
   { name: "Facebook", url: "https://www.facebook.com/share/18GLUxpXFg/?mibextid=wwXIfr" },
   { name: "Instagram", url: "https://www.instagram.com/yazan.khoulani?igsh=MXV6Z3Fqb3l3bWk2Zw==" },
 ];

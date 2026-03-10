@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { trackPurchaseClick, trackSocialClick } from "@/lib/analytics";
+import { useCallback } from "react";
 
 interface PurchaseButtonProps {
   region: "europe" | "arab";
@@ -16,20 +17,26 @@ export function TrackedPurchaseButton({
   children,
   className,
 }: PurchaseButtonProps) {
-  const handleClick = () => {
-    trackPurchaseClick(region);
-    // Open link in new tab
-    window.open(href, "_blank", "noopener,noreferrer");
-  };
+  const handleClick = useCallback(() => {
+    // Track the click but don't prevent default - let the anchor work naturally
+    try {
+      trackPurchaseClick(region);
+    } catch (err) {
+      console.error("Tracking error:", err);
+    }
+  }, [region]);
 
   return (
-    <Button
-      type="button"
-      className={className}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       onClick={handleClick}
+      className={className}
+      aria-label={`فتح رابط الشراء - ${region === "europe" ? "أوروبا" : "الدول العربية"}`}
     >
       {children}
-    </Button>
+    </a>
   );
 }
 
@@ -46,9 +53,14 @@ export function TrackedSocialButton({
   children,
   className,
 }: SocialButtonProps) {
-  const handleClick = () => {
-    trackSocialClick(platform);
-  };
+  const handleClick = useCallback(() => {
+    // Track the click but don't prevent default - let the anchor work naturally
+    try {
+      trackSocialClick(platform);
+    } catch (err) {
+      console.error("Tracking error:", err);
+    }
+  }, [platform]);
 
   return (
     <a

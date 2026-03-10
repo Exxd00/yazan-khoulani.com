@@ -40,7 +40,7 @@ export default function AnnouncementBar() {
             أوروبا
           </a>
           <a
-            href="https://bibliomaniapublishing.com/product/في-حبك-ثار-الوطن/"
+            href="https://bibliomaniapublishing.com/product/%D9%81%D9%8A-%D8%AD%D8%A8%D9%83-%D8%AB%D8%A7%D8%B1-%D8%A7%D9%84%D9%88%D8%B7%D9%86/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackPurchaseClick("arab")}
