@@ -8,10 +8,10 @@ export default function NotFound() {
         <h1 className="text-8xl md:text-9xl font-amiri font-bold heading-primary mb-6">
           404
         </h1>
-        <h2 className="text-3xl md:text-4xl font-amiri font-bold text-black mb-6">
+        <h2 className="text-3xl md:text-4xl font-amiri font-bold text-black dark:text-gray-100 mb-6">
           الصفحة غير موجودة
         </h2>
-        <p className="text-xl text-black/70 mb-10 max-w-md mx-auto">
+        <p className="text-xl text-black/70 dark:text-gray-300 mb-10 max-w-md mx-auto">
           ربما انتقلت الصفحة… لكن الرواية ما زالت هنا.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -57,7 +57,7 @@ export default function QuotesModal({ trigger }: QuotesModalProps) {
           </DialogTitle>
         </DialogHeader>
         <div className="py-8">
-          <blockquote className="text-xl leading-relaxed text-black font-amiri italic text-center min-h-[100px] flex items-center justify-center">
+          <blockquote className="text-xl leading-relaxed text-black dark:text-gray-100 font-amiri italic text-center min-h-[100px] flex items-center justify-center">
             "{quotes[currentIndex]}"
           </blockquote>
           <div className="flex items-center justify-center gap-4 mt-6">
@@ -106,7 +106,7 @@ export default function QuotesModal({ trigger }: QuotesModalProps) {
             </button>
           </div>
         </div>
-        <div className="flex justify-center pt-4 border-t border-gray-100">
+        <div className="flex justify-center pt-4 border-t border-gray-100 dark:border-gray-700">
           <p className="text-sm text-muted-foreground">
             للمزيد من الاقتباسات، تابع صفحات الكاتب الرسمية
           </p>

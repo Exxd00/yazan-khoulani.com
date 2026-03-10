@@ -17,7 +17,7 @@ export default function AboutAuthorPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             عن الكاتب
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             يزن خولاني
           </p>
         </div>
@@ -36,11 +36,11 @@ export default function AboutAuthorPage() {
 
           {/* Bio */}
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xl text-black leading-relaxed mb-6">
+            <p className="text-xl text-black dark:text-gray-100 leading-relaxed mb-6">
               يزن خولاني، كاتب يؤمن بأن الكلمة ليست ترفًا بل موقف.
               يكتب عن الحب الذي يُختبر، والوطن الذي يُسائل، والإنسان الذي يُجبر على الاختيار.
             </p>
-            <p className="text-lg text-black/80 leading-relaxed">
+            <p className="text-lg text-black/80 dark:text-gray-200 leading-relaxed">
               "في حبّك ثار الوطن" هي روايته الأولى، التي خرجت من تجربة حقيقية وعميقة مع المعنى والانتماء.
             </p>
           </div>
@@ -50,18 +50,18 @@ export default function AboutAuthorPage() {
             <h2 className="text-2xl font-amiri font-bold heading-primary mb-6 text-center">
               لماذا كتب هذه الرواية؟
             </h2>
-            <blockquote className="text-xl font-amiri italic text-black leading-relaxed text-center max-w-2xl mx-auto">
+            <blockquote className="text-xl font-amiri italic text-black dark:text-gray-100 leading-relaxed text-center max-w-2xl mx-auto">
               "كتبتها لأن الصمت كان يخنقني. لأن هناك قصصًا لا تُروى إلا حين تُكتب.
               لأن الحب والوطن التقيا في داخلي بطريقة لم أستطع تجاهلها."
             </blockquote>
           </div>
 
           {/* Message to Reader */}
-          <div className="bg-white border border-revolution-green/20 rounded-2xl p-8 md:p-10">
+          <div className="bg-white dark:bg-gray-800 border border-revolution-green/20 rounded-2xl p-8 md:p-10">
             <h2 className="text-2xl font-amiri font-bold heading-primary mb-6 text-center">
               رسالة الكاتب للقارئ
             </h2>
-            <blockquote className="text-lg text-black leading-relaxed text-center max-w-2xl mx-auto">
+            <blockquote className="text-lg text-black dark:text-gray-100 leading-relaxed text-center max-w-2xl mx-auto">
               <p className="mb-4">
                 "عزيزي القارئ،
               </p>
@@ -120,7 +120,7 @@ export default function AboutAuthorPage() {
 
           {/* CTA */}
           <div className="text-center pt-8 border-t border-gray-200">
-            <p className="text-lg text-black/70 mb-6">
+            <p className="text-lg text-black/70 dark:text-gray-300 mb-6">
               اقرأ روايته الأولى
             </p>
             <Link href="/where-to-buy">

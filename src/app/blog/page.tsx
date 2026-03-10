@@ -119,7 +119,7 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             المدونة
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             مقالات عن الأدب، الروايات، الحب والوطن
           </p>
         </div>
@@ -130,12 +130,12 @@ export default function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group bg-white border border-revolution-green/10 rounded-2xl p-6 hover:border-revolution-green/30 hover:shadow-lg transition-all"
+              className="group bg-white dark:bg-gray-800 border border-revolution-green/10 rounded-2xl p-6 hover:border-revolution-green/30 hover:shadow-lg transition-all"
             >
-              <h2 className="text-xl font-amiri font-bold text-black group-hover:text-revolution-green transition-colors mb-3 leading-tight">
+              <h2 className="text-xl font-amiri font-bold text-black dark:text-gray-100 group-hover:text-revolution-green transition-colors mb-3 leading-tight">
                 {article.title}
               </h2>
-              <p className="text-black/70 leading-relaxed">
+              <p className="text-black/70 dark:text-gray-300 leading-relaxed">
                 {article.excerpt}
               </p>
               <span className="inline-flex items-center gap-2 text-revolution-green font-medium mt-4 group-hover:gap-3 transition-all">

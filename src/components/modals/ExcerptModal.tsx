@@ -38,13 +38,13 @@ export default function ExcerptModal({ trigger }: ExcerptModalProps) {
           </DialogTitle>
         </DialogHeader>
         <div className="py-6">
-          <blockquote className="text-lg leading-relaxed text-black font-amiri italic text-center border-r-4 border-revolution-green pr-4">
+          <blockquote className="text-lg leading-relaxed text-black dark:text-gray-100 font-amiri italic text-center border-r-4 border-revolution-green pr-4">
             <p className="mb-4">لم يكن الوطن يومًا مجرد خريطة…</p>
             <p className="mb-4">كان شيئًا يشبه القلب.</p>
             <p>لكن القلوب، حين تتعب، لا تعود كما كانت.</p>
           </blockquote>
         </div>
-        <div className="flex justify-center pt-4 border-t border-gray-100">
+        <div className="flex justify-center pt-4 border-t border-gray-100 dark:border-gray-700">
           <Link href="/where-to-buy">
             <Button className="btn-cta">اشترِ الرواية الآن</Button>
           </Link>

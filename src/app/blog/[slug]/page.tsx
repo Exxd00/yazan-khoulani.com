@@ -306,7 +306,7 @@ export default async function BlogArticlePage({ params }: Props) {
                 );
               }
               return (
-                <p key={`p-${index}`} className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p key={`p-${index}`} className="text-base md:text-lg text-black/80 dark:text-gray-200 leading-relaxed mb-4">
                   {p.content}
                 </p>
               );
@@ -317,7 +317,7 @@ export default async function BlogArticlePage({ params }: Props) {
             <h2 className="text-xl md:text-2xl font-amiri font-bold heading-primary mb-3 md:mb-4">
               اقرأ رواية "في حبّك ثار الوطن"
             </h2>
-            <p className="text-sm md:text-base text-black/70 mb-4 md:mb-6">
+            <p className="text-sm md:text-base text-black/70 dark:text-gray-300 mb-4 md:mb-6">
               رواية واقعية عن حبٍّ لم يحتمل الصمت… ووطنٍ لم يحتمل الحقيقة.
             </p>
             <Link href="/where-to-buy">
@@ -339,9 +339,9 @@ export default async function BlogArticlePage({ params }: Props) {
                   <Link
                     key={relatedArticle.slug}
                     href={`/blog/${relatedArticle.slug}`}
-                    className="block p-3 md:p-4 bg-white border border-revolution-green/10 rounded-lg md:rounded-xl hover:border-revolution-green/30 transition-colors"
+                    className="block p-3 md:p-4 bg-white dark:bg-gray-800 border border-revolution-green/10 rounded-lg md:rounded-xl hover:border-revolution-green/30 transition-colors"
                   >
-                    <h4 className="text-sm md:text-base font-bold text-black hover:text-revolution-green transition-colors leading-tight">
+                    <h4 className="text-sm md:text-base font-bold text-black dark:text-gray-100 hover:text-revolution-green transition-colors leading-tight">
                       {relatedArticle.title}
                     </h4>
                   </Link>

@@ -50,7 +50,7 @@ export default function ReviewsPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             آراء القراء
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             ماذا قال القراء عن الرواية
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function ReviewsPage() {
           {reviews.map((review) => (
             <div
               key={review.name}
-              className="bg-white border border-revolution-green/10 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-revolution-green/10 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -82,14 +82,14 @@ export default function ReviewsPage() {
               </div>
 
               {/* Text */}
-              <blockquote className="text-lg text-black leading-relaxed mb-4">
+              <blockquote className="text-lg text-black dark:text-gray-100 leading-relaxed mb-4">
                 "{review.text}"
               </blockquote>
 
               {/* Author */}
               <div className="border-t border-gray-100 pt-4">
-                <p className="font-bold text-black dark:text-gray-100">{review.name}</p>
-                <p className="text-sm text-black/60 dark:text-gray-400">{review.country}</p>
+                <p className="font-bold text-black dark:text-gray-100 dark:text-gray-100">{review.name}</p>
+                <p className="text-sm text-black/60 dark:text-gray-400 dark:text-gray-400">{review.country}</p>
               </div>
             </div>
           ))}
@@ -100,7 +100,7 @@ export default function ReviewsPage() {
           <h2 className="text-2xl font-amiri font-bold heading-primary mb-4">
             انضم لعائلة القراء
           </h2>
-          <p className="text-lg text-black/70 mb-8">
+          <p className="text-lg text-black/70 dark:text-gray-300 mb-8">
             احصل على نسختك واكتشف لماذا أحبها القراء
           </p>
           <Link href="/where-to-buy">

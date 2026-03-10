@@ -45,7 +45,7 @@ export default function QuotesPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             اقتباسات من الرواية
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             كلمات تترك أثرًا… دون أن تكشف الحكاية
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function QuotesPage() {
               className="card-quote group"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <p className="text-lg font-amiri italic text-black leading-relaxed group-hover:text-revolution-green transition-colors">
+              <p className="text-lg font-amiri italic text-black dark:text-gray-100 leading-relaxed group-hover:text-revolution-green transition-colors">
                 "{quote}"
               </p>
             </blockquote>
@@ -67,7 +67,7 @@ export default function QuotesPage() {
 
         {/* Social CTA */}
         <div className="text-center bg-gray-50 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto mb-12">
-          <p className="text-xl text-black/80 mb-6">
+          <p className="text-xl text-black/80 dark:text-gray-200 mb-6">
             للمزيد من الاقتباسات، تابع صفحات الكاتب الرسمية
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

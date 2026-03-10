@@ -33,7 +33,7 @@ export default function AboutNovelPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             عن الرواية
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             تعرف على القصة خلف الكلمات
           </p>
         </div>
@@ -62,11 +62,11 @@ export default function AboutNovelPage() {
           <div className="space-y-10">
             {/* About Text */}
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-black leading-relaxed mb-6">
+              <p className="text-xl text-black dark:text-gray-100 leading-relaxed mb-6">
                 هذه الرواية تقترب من الإنسان حين يُطلب منه أن يصمت،
                 وتضع الحب في اختبارٍ لا ينجو منه أحد بلا أثر.
               </p>
-              <p className="text-xl text-black leading-relaxed">
+              <p className="text-xl text-black dark:text-gray-100 leading-relaxed">
                 هي رواية عن المعنى قبل الحدث… وعن الأثر قبل الخاتمة.
               </p>
             </div>
@@ -80,14 +80,14 @@ export default function AboutNovelPage() {
                 {symbolicReading.map((point) => (
                   <li key={point} className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-2 h-2 bg-revolution-green rounded-full mt-2.5" />
-                    <span className="text-lg text-black dark:text-gray-100">{point}</span>
+                    <span className="text-lg text-black dark:text-gray-100 dark:text-gray-100">{point}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Book Data */}
-            <div className="bg-white border border-revolution-green/20 rounded-2xl p-8">
+            <div className="bg-white dark:bg-gray-800 border border-revolution-green/20 rounded-2xl p-8">
               <h2 className="text-2xl font-amiri font-bold heading-primary mb-6">
                 بيانات الكتاب
               </h2>
@@ -97,10 +97,10 @@ export default function AboutNovelPage() {
                     key={item.label}
                     className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 border-b border-gray-100 pb-4 last:border-0 last:pb-0"
                   >
-                    <dt className="text-black/60 font-medium min-w-[100px]">
+                    <dt className="text-black/60 dark:text-gray-400 font-medium min-w-[100px]">
                       {item.label}:
                     </dt>
-                    <dd className="text-black font-bold">{item.value}</dd>
+                    <dd className="text-black dark:text-gray-100 font-bold">{item.value}</dd>
                   </div>
                 ))}
               </dl>

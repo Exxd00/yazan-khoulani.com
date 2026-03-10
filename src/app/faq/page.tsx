@@ -61,7 +61,7 @@ export default function FAQPage() {
           <h1 className="text-4xl md:text-5xl font-amiri font-bold heading-primary mb-6">
             الأسئلة الشائعة
           </h1>
-          <p className="text-xl text-black/70 max-w-2xl mx-auto">
+          <p className="text-xl text-black/70 dark:text-gray-300 max-w-2xl mx-auto">
             إجابات على أكثر الأسئلة شيوعًا
           </p>
         </div>
@@ -73,12 +73,12 @@ export default function FAQPage() {
               <AccordionItem
                 key={faq.question}
                 value={`item-${index}`}
-                className="bg-white border border-revolution-green/10 rounded-xl px-6 data-[state=open]:border-revolution-green/30"
+                className="bg-white dark:bg-gray-800 border border-revolution-green/10 rounded-xl px-6 data-[state=open]:border-revolution-green/30"
               >
-                <AccordionTrigger className="text-lg font-bold text-black hover:text-revolution-green py-6 text-right">
+                <AccordionTrigger className="text-lg font-bold text-black dark:text-gray-100 hover:text-revolution-green py-6 text-right">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-black/80 leading-relaxed pb-6">
+                <AccordionContent className="text-black/80 dark:text-gray-200 leading-relaxed pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -91,7 +91,7 @@ export default function FAQPage() {
           <h2 className="text-2xl font-amiri font-bold heading-primary mb-4">
             لم تجد إجابة لسؤالك؟
           </h2>
-          <p className="text-lg text-black/70 mb-8">
+          <p className="text-lg text-black/70 dark:text-gray-300 mb-8">
             تواصل مع الكاتب مباشرة عبر صفحاته الرسمية
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
