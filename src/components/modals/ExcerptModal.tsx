@@ -31,7 +31,7 @@ export default function ExcerptModal({ trigger }: ExcerptModalProps) {
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-lg bg-white">
+      <DialogContent className="sm:max-w-lg bg-white dark:bg-gray-800">
         <DialogHeader>
           <DialogTitle className="text-2xl font-amiri heading-primary text-center">
             مقطع مسرّب من الرواية

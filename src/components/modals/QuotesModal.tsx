@@ -50,7 +50,7 @@ export default function QuotesModal({ trigger }: QuotesModalProps) {
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-lg bg-white">
+      <DialogContent className="sm:max-w-lg bg-white dark:bg-gray-800">
         <DialogHeader>
           <DialogTitle className="text-2xl font-amiri heading-primary text-center">
             اقتباسات من الرواية

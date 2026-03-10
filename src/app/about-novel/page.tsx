@@ -80,7 +80,7 @@ export default function AboutNovelPage() {
                 {symbolicReading.map((point) => (
                   <li key={point} className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-2 h-2 bg-revolution-green rounded-full mt-2.5" />
-                    <span className="text-lg text-black">{point}</span>
+                    <span className="text-lg text-black dark:text-gray-100">{point}</span>
                   </li>
                 ))}
               </ul>

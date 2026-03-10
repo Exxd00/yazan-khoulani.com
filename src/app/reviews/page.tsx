@@ -88,8 +88,8 @@ export default function ReviewsPage() {
 
               {/* Author */}
               <div className="border-t border-gray-100 pt-4">
-                <p className="font-bold text-black">{review.name}</p>
-                <p className="text-sm text-black/60">{review.country}</p>
+                <p className="font-bold text-black dark:text-gray-100">{review.name}</p>
+                <p className="text-sm text-black/60 dark:text-gray-400">{review.country}</p>
               </div>
             </div>
           ))}

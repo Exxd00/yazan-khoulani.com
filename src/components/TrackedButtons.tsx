@@ -16,8 +16,9 @@ export function TrackedPurchaseButton({
   children,
   className,
 }: PurchaseButtonProps) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     trackPurchaseClick(region);
+    // Allow the link to open naturally
   };
 
   return (
@@ -26,8 +27,9 @@ export function TrackedPurchaseButton({
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
+      style={{ display: 'inline-block' }}
     >
-      <Button className={className}>{children}</Button>
+      <Button type="button" className={className}>{children}</Button>
     </a>
   );
 }
